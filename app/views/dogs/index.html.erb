@@ -1,0 +1,13 @@
+<% @dogs.each do |dog| %>
+  <%= link_to dog.name, dog_path(dog) %>
+  <%= dog.employee_count %>
+<% end %>
+
+<%= form_tag(dogs_path, method: "get") do %>
+<select name = "option">
+  <option placeholder = "Sort Dogs">  Sort Dogs</option>
+  <option value = "ASC"> ascending</option>
+  <option value = "DESC"> descending</option>
+</select>
+<%= submit_tag 'submit' %>
+<% end %>
