@@ -1,0 +1,9 @@
+<h1>Register New Dunder Mifflin Employee</h1>
+
+<% if !!flash[:errors] %>
+  <%flash[:errors].each do |message| %>
+    <%= message %>
+  <% end %>
+<% end %>
+
+<%= render 'form' %>

@@ -1,0 +1,9 @@
+<h1>List of Dunder Mifflin Employees</h1>
+
+<ul>
+<% @employees.each do |employee| %>
+    <%= link_to employee.name, employee_path(employee) %><br>
+<% end %>
+</ul>
+
+<%= button_to "Register New Employee", new_employee_path, :method => 'get' %>

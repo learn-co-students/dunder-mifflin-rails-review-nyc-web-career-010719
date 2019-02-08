@@ -1,0 +1,18 @@
+<h1><%= @employee.name %></h1>
+
+<img src="<%= @employee.img_url %>">
+
+<h4>Alias: <%= @employee.alias %></h4>
+
+<h4>Title: <%= @employee.title %></h4>
+
+<h4>Office: <%= @employee.office %></h4>
+
+<h4>Dog: <%= link_to @employee.dog.name, dog_path(@employee.dog) %></h4>
+
+<p><%= link_to "View all Employees", employees_path %></p>
+
+<p><%= link_to "Edit", edit_employee_path %></p>
+<p><%= link_to "Delete", employee_path(@employee),
+                         :data => {:confirm => "Are you sure?",
+                                   :method => "delete"} %></p>
