@@ -1,0 +1,13 @@
+<h1>Edit a Dunder Mifflin Employee</h1>
+
+<% if !!flash[:errors] %>
+  <% flash[:errors].each do |message| %>
+    <p><%= message %></p>
+  <% end %>
+<% end %>
+
+<%= render 'form' %>
+
+<p><%= link_to "Delete", employee_path(@employee),
+                         :data => {:confirm => "Are you sure?",
+                                   :method => "delete"} %></p>
