@@ -1,0 +1,10 @@
+<h1> <%= @dog.name %>   </h1>
+<p> <%= @dog.age %> </p>
+<p> <%= @dog.breed %> </p>
+
+<h3>Employees:</h3>
+<% @dog.employees.map do |employee| %>
+  <ul>
+    <li><%= link_to employee.first_name, employee %></li>
+  </ul>
+<% end %>
