@@ -1,0 +1,17 @@
+<h1>Dog Index</h1> <br>
+<% @dogs.each do |dog| %>
+  <%=link_to dog.name, dog%><br>
+  Number of Employees: <%= dog.employees.count %><br>
+<% end  %>
+
+<%= form_tag(dogs_path, method: "get") do %>
+<form action="/dogs" method="get">
+  <select name="sort" method="get/employees">
+    <option value="">Please select</option>
+    <option value="1" >Dec to Asc</option>
+    <option value="2">Asc to Dec</option>
+    <option value="3">Normal</option>
+  </select>
+  <%= submit_tag "Sort" %>
+</form>
+<% end %>
